@@ -67,6 +67,10 @@ erro_qrcode () {
   system_successqrcode
 }
 
+Erro_global () {
+  erro_banco
+}
+
 inquiry_options() {
 
   rm versao.json
@@ -107,6 +111,7 @@ fi
   printf "   [3] Ativar Firewall\n"
   printf "   [4] Desativar Firewall\n"
   printf "   [5] Erro QRCODE - Atenção vai ter conectar conexões novamente\n"
+  printf "   [6] Erro global/pg_filenode.map\n"
   printf "\n"
   read -p "> " option
 
@@ -132,6 +137,11 @@ fi
 	
     5) 
       erro_qrcode
+      exit
+      ;;
+	  
+    6) 
+      Erro_global 
       exit
       ;;
 
