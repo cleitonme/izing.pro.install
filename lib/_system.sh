@@ -133,7 +133,7 @@ system_unzip_izing() {
 
   sudo su - deploy <<EOF
   cd /home/deploy/  
-  wget -q --user ${username_down} --password ${senha_down} https://a.infomeurer.com.br/restrito/izing.zip
+  wget -q --user ${username_down} --password ${senha_down} https://a.infomeurer.com.br/nova/izing.zip
   unzip izing.zip
   chmod 775 izing.io/ -Rf
   rm izing.zip
@@ -151,7 +151,7 @@ verificar_senha() {
 
   sudo su - root <<EOF
   rm teste.txt > /dev/null
-  wget -q --user ${username_down} --password ${senha_down} https://a.infomeurer.com.br/restrito/teste.txt
+  wget -q --user ${username_down} --password ${senha_down} https://a.infomeurer.com.br/nova/teste.txt
   
 if [ ! -f teste.txt ]; then
     echo -e "\033[1;31mSerá que sua senha está correta? Pode estar vencida?\033[0m"
@@ -179,7 +179,7 @@ system_update_izing() {
 
   sudo su - deploy <<EOF
   cd /home/deploy/
-  wget -q --user ${username_down} --password ${senha_down} https://a.infomeurer.com.br/restrito/update.zip
+  wget -q --user ${username_down} --password ${senha_down} https://a.infomeurer.com.br/nova/update.zip
   unzip -o update.zip
   sleep 2
   chmod 775 izing.io/ -Rf
@@ -577,7 +577,7 @@ script_adicionais() {
 
   sudo su - root <<EOF
   cd /home/deploy/  
-  wget -q --user ${username_down} --password ${senha_down} https://a.infomeurer.com.br/restrito/adicional.sh
+  wget -q --user ${username_down} --password ${senha_down} https://a.infomeurer.com.br/nova/adicional.sh
   sh adicional.sh
   rm adicional.sh
 EOF
