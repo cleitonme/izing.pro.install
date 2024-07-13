@@ -78,7 +78,7 @@ Erro_global () {
 inquiry_options() {
 
   rm versao.json
-  wget -q https://a.infomeurer.com.br/nova.json versao.json
+  wget -q -O versao.json https://a.infomeurer.com.br/nova.json
   print_banner
   
 # Verifica se o arquivo package.json existe
